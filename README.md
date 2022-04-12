@@ -3,8 +3,10 @@ An unofficial hastebin module.
 
 `pip install hastebiny`
 
-This is a simpe module that allows you to create and recieve hastebins. Using the send function, you can send data (text) to hastebins server and store it there, the function will return a key to access this data.
-The get function will return the data (text) attributed to a key.
+`requirement: requests (pip install requests)` 
+
+This is a simpe module that allows you to create and recieve hastebins. There are two functions `send` and `get`. Using the `send` function, you can send data (text) to hastebins server and store it there, the function will return a key to access this data.
+The `get` function will return the data (text) attributed to a key.
 
 ```py
 # Example code
