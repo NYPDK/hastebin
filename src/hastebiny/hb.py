@@ -13,6 +13,10 @@ def send(payload:str, logging=True):
     
     try:
         preq = requests.post("https://www.toptal.com/developers/hastebin/documents", data=payload)
+        if preq.status_code == 429:
+            if logging:
+                print("Too many requests!")
+            return -1
         return preq.json()["key"]
     except Exception as e:
         if logging:
